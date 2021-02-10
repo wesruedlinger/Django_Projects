@@ -1,0 +1,33 @@
+{% extends "store/main.html" %}
+{% load static %}
+
+{% block title %}
+    {{ product.name }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg">
+        <div class="box-element product">
+            <img src="{{ product.imageURL }}" class="thumbnail-detail">
+            <h1>{{ product.name }}</h1>
+            <h5>
+                Category: {{ product.category }}
+            </h5>
+            {% if product.available == True %}In Stock
+            <h3 class="price">${{ product.price }}</h3>
+            <form action="#" method="#">
+                {{ cart_product_form }}
+                {% csrf_token %}
+                <input class="btn btn-outline-dark" type="submit" value="Add to cart">
+            </form>
+            {% else %}
+            Out of Stock
+            <h3 class="price">${{ product.price }}</h3>
+            {% endif %}
+            <p>{{ product.description|linebreaks }}</p>
+            <a class="btn btn-outline-dark" href="{% url 'store' %}">&#x2190; Back to Store</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

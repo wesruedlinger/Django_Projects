@@ -1,0 +1,15 @@
+.vscode
+.DS_Store
+db.sqlite3
+__init__.cpython-37.pyc
+settings.cpython-37.pyc
+urls.cpython-37.pyc
+wsgi.cpython-37.pyc
+BlogEnv
+pyvenv.cfg
+__pycache__
+.env
+README.md
+cert.crt
+cert.key
+/ENV

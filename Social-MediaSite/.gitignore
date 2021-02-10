@@ -1,0 +1,7 @@
+.vscode
+__pycache__
+db.sqlite3
+.env
+cert.crt
+cert.key
+ENV/

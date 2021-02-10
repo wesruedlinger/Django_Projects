@@ -1,0 +1,7 @@
+__pycache__/
+migrations
+db.sqlite3
+#products
+ENV/
+media/
+.vscode/
